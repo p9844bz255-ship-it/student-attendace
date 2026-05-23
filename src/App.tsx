@@ -15,7 +15,7 @@ import {
   ChevronRight,
   Database,
   Grid,
-  School,
+  School, 
   Settings,
   ArrowLeft,
   XCircle,

@@ -15,7 +15,7 @@ import {
   ChevronRight,
   Database,
   Grid,
-  School, 
+  School,
   Settings,
   ArrowLeft,
   XCircle,
@@ -516,12 +516,13 @@ export default function App() {
                   }
                 }}
                 className="w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center overflow-hidden pointer-events-none logo-shine-container rounded-3xl"
-              <img
-  src="https://www.image2url.com/r2/default/images/1778032976429-fb84224a-3e08-4092-b38f-529e608a47d2.png"
-  alt="Al-Wildan Logo"
-  className="w-full h-full object-contain filter drop-shadow-md" // <-- Sebelum dikembalikan, di sini ada class "grayscale brightness-95"
-  referrerPolicy="no-referrer"
-/>
+              >
+                <img
+                  src="https://www.image2url.com/r2/default/images/1778032976429-fb84224a-3e08-4092-b38f-529e608a47d2.png"
+                  alt="Al-Wildan Logo"
+                  className="w-full h-full object-contain filter drop-shadow-md"
+                  referrerPolicy="no-referrer"
+                />
               </motion.div>
               <div className="flex flex-col items-center mt-2 w-full px-2">
                 <span className="text-[11px] sm:text-[12px] font-extrabold text-stone-500 tracking-[0.25em] uppercase mb-1">

@@ -1,0 +1,75 @@
+{
+  "entities": {
+    "Student": {
+      "title": "Student",
+      "description": "Firestore document structure for an individual student record",
+      "type": "object",
+      "properties": {
+        "nama": {
+          "type": "string",
+          "description": "Nama lengkap siswa"
+        },
+        "kelas": {
+          "type": "string",
+          "description": "Kelas siswa, misal '12 AE 3' atau '7 AE 1'"
+        },
+        "nisn": {
+          "type": "string",
+          "description": "Nomor Induk Siswa Nasional (NISN)"
+        },
+        "program": {
+          "type": "string",
+          "description": "Program bimbingan/sekolah, misal 'BOARDING' atau 'FULLDAY'"
+        },
+        "wali_kelas": {
+          "type": "string",
+          "description": "Nama Lengkap Wali Kelas siswa"
+        },
+        "student_id": {
+          "type": "string",
+          "description": "ID unik siswa sebagai penanda di sistem"
+        }
+      },
+      "required": ["nama", "kelas", "nisn", "student_id"]
+    },
+    "AttendanceRecord": {
+      "title": "AttendanceRecord",
+      "description": "Firestore document structure for an individual student attendance record per day",
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "description": "Tanggal absensi dengan format YYYY-MM-DD"
+        },
+        "studentId": {
+          "type": "string",
+          "description": "ID unik siswa"
+        },
+        "classId": {
+          "type": "string",
+          "description": "ID kelas (nama kelas)"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Hadir", "Izin", "Sakit", "Alpa"],
+          "description": "Status kehadiran siswa"
+        },
+        "note": {
+          "type": "string",
+          "description": "Catatan tambahan kehadiran siswa"
+        }
+      },
+      "required": ["date", "studentId", "classId", "status"]
+    }
+  },
+  "firestore": {
+    "/students/{studentId}": {
+      "schema": "Student",
+      "description": "Collection containing all students"
+    },
+    "/attendance/{attendanceId}": {
+      "schema": "AttendanceRecord",
+      "description": "Collection containing all daily student attendance records"
+    }
+  }
+}

@@ -1,6 +1,0 @@
-{
-  "name": "Premium Attendance",
-  "description": "Sistem pencatatan absensi siswa premium dengan desain modern minimalis yang dioptimalkan untuk perangkat seluler.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
